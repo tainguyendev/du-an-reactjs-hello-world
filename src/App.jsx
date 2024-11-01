@@ -5,16 +5,12 @@ import './App.css'
 
 const App = () => {
   const [count, setCount] = useState(0)
-  const myFunction = () => {
-    console.log(">>> cai nay la noi dung can xuat ra")
+
+  const Thietlapcomponent = () => {
+    return (
+      <div className="div">xin chào tôi đang thực hành component = html + js</div>
+    )
   }
-  myFunction();
-
-
-
-
-
-
   return (
     <>
       <div>
@@ -26,9 +22,11 @@ const App = () => {
         </a>
       </div>
       <h1>Hello world</h1>
+      <Thietlapcomponent />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
+
         </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR

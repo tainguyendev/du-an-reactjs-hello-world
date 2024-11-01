@@ -3,8 +3,17 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
+const App = () => {
   const [count, setCount] = useState(0)
+  const myFunction = () => {
+    console.log(">>> cai nay la noi dung can xuat ra")
+  }
+  myFunction();
+
+
+
+
+
 
   return (
     <>

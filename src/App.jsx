@@ -1,16 +1,13 @@
 import './components/todo/todo.css';
+import Tododata from './components/todo/tododata';
+import Todonew from './components/todo/todonew';
 const App = () => {
   return (
     <>
       <div className="todo-container">
         <div className="todo-title">Todo List</div>
-        <div>
-          <input type="text" />
-          <button>ADD</button>
-        </div>
-        <div>
-          <div className="image">learning react</div>
-        </div>
+        <Todonew />
+        <Tododata />
       </div>
     </>
   )

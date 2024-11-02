@@ -5,12 +5,22 @@ import LogoImage from './assets/react.svg';
 
 
 const App = () => {
+  const name = "Nguyễn Tiến Tài";//(đây là props của thằng cha (App.jsx là cha))
+  const age = 21;//(đây là props của thằng cha (App.jsx là cha))
+  const data = {
+    Address: "Bình thuận",
+    country: "Việt nam"
+  }//(đây là props của thằng cha (App.jsx là cha))
   return (
     <>
       <div className="todo-container">
         <div className="todo-title">Todo List</div>
         <Todonew />
-        <Tododata />
+        <Tododata
+          Tên={name}//(đây là khai báo giá trị props của thằng cha (App.jsx là cha))
+          Tuổi={age}//(đây là khai báo giá trị props của thằng cha (App.jsx là cha))
+          mệt={data}//(đây là khai báo giá trị props của thằng cha (App.jsx là cha))
+        />
         <div className="todo-image">
           <img src={LogoImage} className='logo' />
         </div>

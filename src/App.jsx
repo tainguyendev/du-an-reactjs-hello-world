@@ -6,7 +6,7 @@ import LogoImage from './assets/react.svg';
 
 const App = () => {
   const addNewTodo = () => {
-    alert(`bạn đã thêm mới thành công ${age} `)
+    alert(`Xin chào ${name} đã quay trở lại`)
   }
   const name = "Nguyễn Tiến Tài";//(đây là props của thằng cha (App.jsx là cha))
   const age = 21;//(đây là props của thằng cha (App.jsx là cha))

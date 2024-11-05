@@ -2,9 +2,14 @@ import './components/todo/todo.css';
 import Tododata from './components/todo/tododata';
 import Todonew from './components/todo/todonew';
 import LogoImage from './assets/react.svg';
+import { useState } from 'react';
 
 
 const App = () => {
+  const [todolist, settodolist] = useState([
+    { id: 1, name: "learning react" },
+    { id: 2, name: "watching youtube" }
+  ])
   const addNewTodo = () => {
     alert(`Xin chào ${name} đã quay trở lại`)
   }
@@ -24,6 +29,7 @@ const App = () => {
           Tên={name}//(đây là khai báo giá trị props của thằng cha (App.jsx là cha))
           Tuổi={age}//(đây là khai báo giá trị props của thằng cha (App.jsx là cha))
           data={data}//(đây là khai báo giá trị props của thằng cha (App.jsx là cha))
+          todolist={todolist}
         />
         <div className="todo-image">
           <img src={LogoImage} className='logo' />

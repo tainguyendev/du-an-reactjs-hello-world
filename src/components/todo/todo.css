@@ -15,8 +15,14 @@
 .todo-title {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 50px;
-    color: rgb(228, 19, 124);
+    background: linear-gradient(45deg, rgb(228, 19, 124), rgb(0, 172, 193));
+    /* Chuyển màu từ hồng sang xanh */
+    -webkit-background-clip: text;
+    /* Cắt phần nền theo chữ */
+    -webkit-text-fill-color: transparent;
+    /* Màu chữ trong suốt để hiện gradient */
 }
+
 
 input {
     width: 200px;
@@ -81,7 +87,33 @@ button {
 }
 
 .todo-item {
+    width: auto;
     display: flex;
     justify-content: space-between;
     padding-top: 5px;
+    border: 2px solid rgb(228, 19, 124);
+    /* Đặt viền 2px màu tối */
+    padding: 10px;
+    /* Khoảng cách bên trong khung */
+    margin: 10px 0;
+    /* Khoảng cách giữa các khung */
+    border-radius: 5px;
+    /* Góc bo tròn (nếu muốn) */
+    background-color: #f9f9f9;
+    /* Màu nền nhẹ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Đổ bóng nhẹ */
+}
+
+.todo-conntent {
+    color: rgb(228, 19, 124);
+    margin: 10px 0;
+    border: 2px solid rgb(228, 19, 124);
+    /* Đặt viền 2px màu tối */
+    padding: 10px;
+    border-radius: 5px;
+    /* Góc bo tròn (nếu muốn) */
+    background-color: #f9f9f9;
+    /* Màu nền nhẹ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
 }

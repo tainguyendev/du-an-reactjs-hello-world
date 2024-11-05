@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Todonew = (props) => {
-    const [valueInput, setvalueInput] = useState()
+    const [valueInput, setvalueInput] = useState("")
 
     const { addNewTodo } = props;
     // addNewTodo()
@@ -26,7 +26,7 @@ const Todonew = (props) => {
             />
 
             <button onClick={Click}>ADD</button>
-            <div>Xuất ra màn hình nội dung sau: {valueInput} </div>
+            <div className="todo-conntent">Xuất ra màn hình nội dung sau: {valueInput} </div>
         </div>
     )
 }

@@ -10,9 +10,21 @@ const App = () => {
     { id: 1, name: "learning react" },
     { id: 2, name: "watching youtube" }
   ])
-  const addNewTodo = () => {
+  const addNewTodo = (name) => {
     alert(`Xin chào ${name} đã quay trở lại`)
+    const newTodo = {
+      id: RandomSTT(1, 1000),
+      name: name
+    }
+    settodolist([...todolist, newTodo])
+
   }
+
+  const RandomSTT = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+
+
   const name = "Nguyễn Tiến Tài";//(đây là props của thằng cha (App.jsx là cha))
   const age = 21;//(đây là props của thằng cha (App.jsx là cha))
   const data = {
@@ -29,7 +41,9 @@ const App = () => {
           Tên={name}//(đây là khai báo giá trị props của thằng cha (App.jsx là cha))
           Tuổi={age}//(đây là khai báo giá trị props của thằng cha (App.jsx là cha))
           data={data}//(đây là khai báo giá trị props của thằng cha (App.jsx là cha))
+
           todolist={todolist}
+
         />
         <div className="todo-image">
           <img src={LogoImage} className='logo' />

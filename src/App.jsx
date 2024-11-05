@@ -10,17 +10,19 @@ const App = () => {
     { id: 1, name: "learning react" },
     { id: 2, name: "watching youtube" }
   ])
+
   const addNewTodo = (name) => {
     alert(`Xin chào ${name} đã quay trở lại`)
+
     const newTodo = {
-      id: RandomSTT(1, 1000),
+      id: RandomSTT(1, 1000),//id thiết lập từ 1-1000 để random không bị trùng
       name: name
     }
-    settodolist([...todolist, newTodo])
+    settodolist([...todolist, newTodo])//todolist là copylại, newtodo là lấy thông tin
 
   }
 
-  const RandomSTT = (min, max) => {
+  const RandomSTT = (min, max) => {//khai báo random id khi ghi và ấn add sẽ không bị trùng id
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 

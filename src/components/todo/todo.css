@@ -1,5 +1,6 @@
 .todo-container {
     display: flex;
+    /* Sử dụng Flexbox để bố trí các phần tử */
     flex-direction: column;
     /* Căn các phần tử theo chiều dọc */
     justify-content: center;
@@ -9,111 +10,146 @@
     height: 100vh;
     /* Chiều cao toàn màn hình */
     text-align: center;
-
+    /* Căn giữa nội dung theo chiều ngang */
 }
 
 .todo-title {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* Font chữ cho tiêu đề */
     font-size: 50px;
+    /* Kích thước chữ */
     background: linear-gradient(45deg, rgb(228, 19, 124), rgb(0, 172, 193));
-    /* Chuyển màu từ hồng sang xanh */
+    /* Màu nền gradient từ hồng sang xanh */
     -webkit-background-clip: text;
     /* Cắt phần nền theo chữ */
     -webkit-text-fill-color: transparent;
     /* Màu chữ trong suốt để hiện gradient */
 }
 
-
 input {
     width: 200px;
+    /* Chiều rộng ô input */
     padding: 10px;
+    /* Khoảng cách bên trong ô input */
     border: 2px solid rgb(228, 19, 124);
+    /* Đặt viền 2px màu hồng */
     border-radius: 4px;
+    /* Góc bo tròn của ô input */
     margin-right: 10px;
+    /* Khoảng cách bên phải */
     font-size: 16px;
+    /* Kích thước chữ trong ô input */
 }
 
 button {
     width: 80px;
+    /* Chiều rộng nút */
     padding: 10px;
+    /* Khoảng cách bên trong nút */
     border: 2px solid rgb(228, 19, 124);
+    /* Đặt viền 2px màu hồng */
     border-radius: 4px;
+    /* Góc bo tròn của nút */
     color: rgb(228, 19, 124);
+    /* Màu chữ trên nút */
     font-size: 16px;
+    /* Kích thước chữ trên nút */
     cursor: pointer;
+    /* Hiển thị con trỏ khi di chuột qua nút */
 }
 
 .todo-data {
     font-size: 30px;
+    /* Kích thước chữ cho danh sách todos */
     color: rgb(228, 19, 124);
+    /* Màu chữ cho danh sách todos */
 }
 
 .todo-image {
     text-align: center;
+    /* Căn giữa hình ảnh */
     margin-top: 15px;
+    /* Khoảng cách phía trên */
 }
 
 .logo {
     height: 6em;
+    /* Chiều cao hình logo */
     padding: 1.5em;
+    /* Khoảng cách bên trong */
     will-change: filter;
+    /* Tối ưu hóa hiệu ứng hình ảnh */
     transition: filter 300ms;
+    /* Thay đổi hiệu ứng chuyển tiếp */
 }
 
 .logo:hover {
     filter: drop-shadow(0 0 2em #646cffaa);
+    /* Thêm hiệu ứng đổ bóng khi di chuột */
 }
 
 .logo.react:hover {
     filter: drop-shadow(0 0 2em #61dafbaa);
+    /* Hiệu ứng đổ bóng cho logo React khi di chuột */
 }
 
-
-
+/* Định nghĩa animation cho logo quay */
 @keyframes logo-spin {
     from {
         transform: rotate(0deg);
+        /* Bắt đầu từ 0 độ */
     }
 
     to {
         transform: rotate(360deg);
+        /* Kết thúc ở 360 độ */
     }
 }
 
+/* Áp dụng animation cho logo nếu người dùng không chọn giảm chuyển động */
 @media (prefers-reduced-motion: no-preference) {
     .logo {
         animation: logo-spin infinite 15s linear;
+        /* Quay logo vô hạn */
     }
 }
 
 .todo-item {
     width: auto;
+    /* Chiều rộng tự động */
     display: flex;
+    /* Sử dụng Flexbox để bố trí các phần tử trong todo-item */
     justify-content: space-between;
+    /* Căn đều khoảng cách giữa các phần tử */
     padding-top: 5px;
+    /* Khoảng cách phía trên */
     border: 2px solid rgb(228, 19, 124);
-    /* Đặt viền 2px màu tối */
+    /* Đặt viền 2px màu hồng */
     padding: 10px;
-    /* Khoảng cách bên trong khung */
+    /* Khoảng cách bên trong todo-item */
     margin: 10px 0;
-    /* Khoảng cách giữa các khung */
+    /* Khoảng cách giữa các todo-item */
     border-radius: 5px;
-    /* Góc bo tròn (nếu muốn) */
+    /* Góc bo tròn của todo-item */
     background-color: #f9f9f9;
-    /* Màu nền nhẹ */
+    /* Màu nền nhẹ cho todo-item */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Đổ bóng nhẹ */
+    /* Đổ bóng nhẹ cho todo-item */
 }
 
 .todo-conntent {
     color: rgb(228, 19, 124);
+    /* Màu chữ cho phần hiển thị nội dung */
     margin: 10px 0;
+    /* Khoảng cách trên và dưới */
     border: 2px solid rgb(228, 19, 124);
-    /* Đặt viền 2px màu tối */
+    /* Đặt viền 2px màu hồng */
     padding: 10px;
+    /* Khoảng cách bên trong */
     border-radius: 5px;
-    /* Góc bo tròn (nếu muốn) */
+    /* Góc bo tròn */
     background-color: #f9f9f9;
     /* Màu nền nhẹ */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Đổ bóng nhẹ */
 }

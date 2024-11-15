@@ -5,12 +5,12 @@ const Todonew = (props) => {
     // Khởi tạo state "valueInput" để lưu giá trị nhập vào ô input
     const [valueInput, setvalueInput] = useState("")
 
-    const { x } = props; // Lấy hàm addNewTodo từ props
+    const { addNewTodo } = props; // Lấy hàm addNewTodo từ props
 
     // Hàm Click được gọi khi nhấn nút ADD
     const Click = () => {
         alert("Click thực hiện thêm mới thành công"); // Hiển thị thông báo khi thêm thành công
-        x(valueInput); // Gọi hàm addNewTodo với giá trị nhập từ ô input
+        addNewTodo(valueInput); // Gọi hàm addNewTodo với giá trị nhập từ ô input
         setvalueInput(""); // Đặt lại giá trị ô input về rỗng sau khi thêm
     }
 

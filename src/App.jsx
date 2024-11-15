@@ -42,7 +42,7 @@ const App = () => {
           <img src={LogoImage} className='logo' /> {/* Hiển thị logo */}
         </div>
         {/* Component Todonew với props addNewTodo để thêm todo mới */}
-        <Todonew x={addNewTodo} />
+        <Todonew addNewTodo={addNewTodo} />
         {/* Component Tododata với props todolist để hiển thị danh sách todos */}
         <Tododata todolist={todolist} />
       </div>

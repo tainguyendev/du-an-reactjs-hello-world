@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 const Todonew = (props) => {
-
     const [valueInput, setvalueInput] = useState("")
 
     const { addNewTodo } = props;
@@ -12,11 +11,9 @@ const Todonew = (props) => {
         setvalueInput("");
     }
 
-
     const Change = (event) => {
         setvalueInput(event.target.value);
     }
-
 
     return (
         <div className="todo-new">
@@ -25,7 +22,6 @@ const Todonew = (props) => {
                 onChange={Change}
                 value={valueInput}
             />
-
             <button onClick={Click}>ADD</button>
             <div className="todo-conntent">Xuất ra màn hình nội dung sau: {valueInput} </div>
         </div>

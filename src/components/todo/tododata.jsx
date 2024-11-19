@@ -2,6 +2,7 @@ const Tododata = (props) => {
     const { todolist, deleteTodo } = props;
 
     const handleClick = (id) => {
+        alert(`bạn có chắc chắn muốn xóa id: ${id} này không?`);
         deleteTodo(id)
     }
 

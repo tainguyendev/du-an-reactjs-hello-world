@@ -19,6 +19,10 @@ const App = () => {
   const RandomSTT = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
   };
+  const deleteTodo = (id) => {
+    const newTodo = todolist.filter(item => item.id !== id)
+    settodolist(newTodo);
+  }
 
   return (
     <>
@@ -26,8 +30,11 @@ const App = () => {
         <div className="todo-title">Todo List</div>
         <Todonew addNewTodo={addNewTodo} />
 
-        {todolist.length > 0 ?
-          <Tododata todolist={todolist} />
+        {todolist.length > 0 ? // điều kiện toán tử đúng sai
+          <Tododata
+            todolist={todolist}
+            deleteTodo={deleteTodo}
+          />
           :
           <div className="todo-image">
             <img src={LogoImage} className='logo' />

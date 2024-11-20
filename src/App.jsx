@@ -20,9 +20,19 @@ const App = () => {
     return Math.floor(Math.random() * (max - min + 1) + min);
   };
   const deleteTodo = (id) => {
-    const newTodo = todolist.filter(item => item.id !== id)
-    settodolist(newTodo);
+    alert(`id của phần tử ${id} đã được xóa`)
+    const xoa = todolist.filter(item => item.id !== id)
+    // Tạo một mảng các số
+
+    // Sử dụng vòng lặp for để lặp qua từng phần tử trong mảng
+    for (let i = 0; i < xoa.length; i++) {
+      console.log(xoa[i].id);
+    }
+    settodolist(xoa);
+
+
   }
+
 
   return (
     <>
